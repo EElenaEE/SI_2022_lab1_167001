@@ -1,0 +1,36 @@
+﻿//Kloniranje na repositorium na kompjuter//
+
+User@Pc MINGW64 /c
+$ git clone https://github.com/eelenaee/SI_2022_lab1_167001
+Cloning into 'SI_2022_lab1_167001'...
+remote: Enumerating objects: 6, done.
+remote: Counting objects: 100% (6/6), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 6 (delta 0), reused 0 (delta 0), pack-reused 0
+Receiving objects: 100% (6/6), done.
+
+//Listanje za dokument README i ime na glavna granka master//
+
+User@Pc MINGW64 /c
+$ cd SI_2022_lab1_167001
+
+User@Pc MINGW64 /c/SI_2022_lab1_167001 (master)
+$ ls
+README.md
+
+User@Pc MINGW64 /c/SI_2022_lab1_167001 (master)
+
+
+//Dodavanje ekstualen fajl shopping_list.txt//
+
+$ git add shopping_list.txt
+
+User@Pc MINGW64 /c/SI_2022_lab1_167001 (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   shopping_list.txt
+
