@@ -1,5 +1,5 @@
-book
-magazine
-newspaper
-broshure
-maps
+book x 6
+magazine x 15
+newspaper x 27
+broshure x 9
+maps x 34
