@@ -1,0 +1,140 @@
+//Kloniranje na repositorium na kompjuter//
+
+User@Pc MINGW64 /c
+$ git clone https://github.com/eelenaee/SI_2022_lab1_167001
+Cloning into 'SI_2022_lab1_167001'...
+remote: Enumerating objects: 6, done.
+remote: Counting objects: 100% (6/6), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 6 (delta 0), reused 0 (delta 0), pack-reused 0
+Receiving objects: 100% (6/6), done.
+
+//Listanje za dokument README i ime na glavna granka master//
+
+User@Pc MINGW64 /c
+$ cd SI_2022_lab1_167001
+
+User@Pc MINGW64 /c/SI_2022_lab1_167001 (master)
+$ ls
+README.md
+
+User@Pc MINGW64 /c/SI_2022_lab1_167001 (master)
+
+//Konfiguracija//
+User@Pc MINGW64 /c/SI_2022_lab1_167001 (master)
+$ git config --global user.name "Elena Efremovska"
+
+User@Pc MINGW64 /c/SI_2022_lab1_167001 (master)
+$ git config --global user.email elenaelektraefremovska@gmail.com
+
+User@Pc MINGW64 /c/SI_2022_lab1_167001 (master)
+$ git config --global color.ui true
+
+User@Pc MINGW64 /c/SI_2022_lab1_167001 (master)
+
+//Kreiranje na repositorium//
+$ mkdir SI_20022_lab1_167001
+
+$ cd SI_2022_lab1_167001
+
+$ git init
+
+
+
+
+//Dodavanje ekstualen fajl shopping_list.txt//
+
+$ git add shopping_list.txt
+
+User@Pc MINGW64 /c/SI_2022_lab1_167001 (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   shopping_list.txt
+
+
+//Dodavanje tekstualna datoteka 167001.txt//
+
+User@Pc MINGW64 /c/SI_2022_lab1_167001 (master)
+$ git add 167001.txt
+
+User@Pc MINGW64 /c/SI_2022_lab1_167001 (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   167001.txt
+        new file:   shopping_list.txt
+
+//Dodavanje na lista so proizvodi//
+
+$ git commit -m  "Add 5 items to the shopping list"
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   shopping_list.txt
+
+User@Pc MINGW64 /c/SI_2022_lab1_167001 (master)
+$ git commit -m "Add quantities to the items"
+[master 3c4aa63] Add quantities to the items
+ 1 file changed, 5 insertions(+), 5 deletions(-)
+
+$ git log
+commit 3c4aa630bd13a97a317a5e140b563b4b652983ef (HEAD -> master)
+commit 3c4aa630bd13a97a317a5e140b563b4b652983ef (HEAD -> master)
+Author: Elena Efremovska <elenaelektraefremovska@gmail.com>
+Date:   Wed Apr 6 21:47:00 2022 +0200
+
+    Add quantities to the items
+
+commit c282b905e443d5333021714ffca9130fe3f0a3d5
+Author: Elena Efremovska <elenaelektraefremovska@gmail.com>
+Date:   Wed Apr 6 21:41:04 2022 +0200
+
+    Add 5 items to the shopping list
+
+commit 9d63beaf12d542888830dbf3a7346ffb7adb044e (origin/master, origin/HEAD)
+Author: Elena Efremovska <elenaelektraefremovska@gmail.com>
+Date:   Wed Apr 6 21:16:52 2022 +0200
+
+    Add 5 items to the shopping list
+
+commit f1fd9c656b795c94091841ea6316b91c8a39680b
+Author: Elena Efremovska <102921986+EElenaEE@users.noreply.github.com>
+Date:   Mon Apr 4 21:26:22 2022 +0200
+
+    Update README.md
+
+//Granki//
+
+User@Pc MINGW64 /c/SI_2022_lab1_167001 (master)
+$ git branch branch1
+
+User@Pc MINGW64 /c/SI_2022_lab1_167001 (master)
+$ ls
+README.md  shopping_list.txt
+
+User@Pc MINGW64 /c/SI_2022_lab1_167001 (master)
+$ git branch
+  branch1
+* master
+
+User@Pc MINGW64 /c/SI_2022_lab1_167001 (master)
+$ git branch branch2
+
+User@Pc MINGW64 /c/SI_2022_lab1_167001 (master)
+$ git branch
+  branch1
+  branch2
+* master
+
+
