@@ -1,5 +1,5 @@
-kniga
-magazin
-vesnik
-broshura
-mapi
+book
+magazine
+newspaper
+broshure
+maps
