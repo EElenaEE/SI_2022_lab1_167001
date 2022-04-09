@@ -326,6 +326,16 @@ User@Pc MINGW64 /c/SI_2022_lab1_167001 (master)
 $ git merge branch2
 Already up to date.
 
+//Dodavanje na document//
+User@Pc MINGW64 /c/SI_2022_lab1_167001 (master)
+$ git add 167001.txt
+
+User@Pc MINGW64 /c/SI_2022_lab1_167001 (master)
+$ git commit -m "Add doc"
+[master d0f10c1] Add doc
+ 1 file changed, 198 insertions(+)
+
+
 
 
 
