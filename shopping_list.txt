@@ -1,5 +1,6 @@
 book x 13
 <<<<<<< HEAD
+<<<<<<< HEAD
 magazine x 75
 =======
 magazine x 7
@@ -7,3 +8,10 @@ magazine x 7
 newspaper x 26
 broshure x 10
 maps x 42
+=======
+magazine x 75
+newspaper x 26
+commics x 10
+maps x 42
+puzzletext 37
+>>>>>>> branch2
