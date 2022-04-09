@@ -54,6 +54,17 @@ Your branch is up to date with 'origin/master'.
 Changes to be committed:
   (use "git restore --staged <file>..." to unstage)
         new file:   shopping_list.txt
+/Pravenje komit//
+
+User@Pc MINGW64 /c/SI_2022_lab1_167001 (master)
+$ git commit -m "Add 5 items to the shopping list"
+[master ce7fdf2] Add 5 items to the shopping list
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+User@Pc MINGW64 /c/SI_2022_lab1_167001 (master)
+$ git commit -m "Add quantities to the items"
+[master b450456] Add quantities to the items
+ 1 file changed, 4 insertions(+), 4 deletions(-)
 
 
 //Dodavanje tekstualna datoteka 167001.txt//
@@ -136,5 +147,192 @@ $ git branch
   branch1
   branch2
 * master
+
+
+User@Pc MINGW64 /c/SI_2022_lab1_167001 (master)
+$ git add 167001.txt
+
+User@Pc MINGW64 /c/SI_2022_lab1_167001 (master)
+$ ls
+167001.txt  README.md  shopping_list.txt
+
+User@Pc MINGW64 /c/SI_2022_lab1_167001 (master)
+$ git commit -m "Add doc"
+[master 1c4d5ab] Add doc
+ 1 file changed, 140 insertions(+)
+ create mode 100644 167001.txt
+
+$ git log
+commit b450456707649f16c0b1d03faa204fcd45b19f40 (HEAD -> master)
+Author: Elena Efremovska <elenaelektraefremovska@gmail.com>
+Date:   Sat Apr 9 20:25:43 2022 +0200
+
+    Add quantities to the items
+
+commit ce7fdf2519a7b8e062e694fc73f11d7db75fca77
+Author: Elena Efremovska <elenaelektraefremovska@gmail.com>
+Date:   Sat Apr 9 20:16:39 2022 +0200
+
+    Add 5 items to the shopping list
+
+commit 1c4d5ab07ecfaf2aa154009cd670545346f86d9c (origin/master, origin/HEAD)
+Author: Elena Efremovska <elenaelektraefremovska@gmail.com>
+Date:   Wed Apr 6 22:18:11 2022 +0200
+
+    Add doc
+
+commit 3c4aa630bd13a97a317a5e140b563b4b652983ef (branch2, branch1)
+Author: Elena Efremovska <elenaelektraefremovska@gmail.com>
+Date:   Wed Apr 6 21:47:00 2022 +0200
+
+    Add quantities to the items
+
+commit c282b905e443d5333021714ffca9130fe3f0a3d5
+Author: Elena Efremovska <elenaelektraefremovska@gmail.com>
+Date:   Wed Apr 6 21:41:04 2022 +0200
+
+    Add 5 items to the shopping list
+
+commit 9d63beaf12d542888830dbf3a7346ffb7adb044e
+Author: Elena Efremovska <elenaelektraefremovska@gmail.com>
+Date:   Wed Apr 6 21:16:52 2022 +0200
+
+    Add 5 items to the shopping list
+
+commit f1fd9c656b795c94091841ea6316b91c8a39680b
+Author: Elena Efremovska <102921986+EElenaEE@users.noreply.github.com>
+Date:   Mon Apr 4 21:26:22 2022 +0200
+
+    Update README.md
+
+commit bd21562ea0bd333dba4d5a82a24c2c4c23151ee6
+Author: Elena Efremovska <102921986+EElenaEE@users.noreply.github.com>
+Date:   Mon Apr 4 21:14:59 2022 +0200
+
+    Initial commit
+(END)
+//Sinhronizacija//
+$ git push
+
+Enumerating objects: 8, done.
+Counting objects: 100% (8/8), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 625 bytes | 312.00 KiB/s, done.
+Total 6 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 1 local object.
+remote: This repository moved. Please use the new location:
+remote:   https://github.com/EElenaEE/SI_2022_lab1_167001.git
+To https://github.com/eelenaee/SI_2022_lab1_167001
+   1c4d5ab..b450456  master -> master
+
+$ git fetch --prune
+
+User@Pc MINGW64 /c/SI_2022_lab1_167001 (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+//Branch 1//
+$ git checkout branch1
+Switched to branch 'branch1'
+
+User@Pc MINGW64 /c/SI_2022_lab1_167001 (branch1)
+$ git commit -m "Change quantity of item #5"
+[branch1 a44b3a1] Change quantity of item #5
+ 1 file changed, 5 insertions(+), 5 deletions(-)
+
+$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+//Promeni//
+User@Pc MINGW64 /c/SI_2022_lab1_167001 (master)
+$ git commit -m "Change quantity of item #2"
+[master 79d31c5] Change quantity of item #2
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+$ git fetch origin && git reset --soft refs/remotes/origin/master
+
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   shopping_list.txt
+
+User@Pc MINGW64 /c/SI_2022_lab1_167001 (master)
+$ git fetch $url --
+
+User@Pc MINGW64 /c/SI_2022_lab1_167001 (master)
+$ git ls-remote -h $url | while read sha ref; do echo "$ref:$ref"; done
+git ls-remote [--heads] [--tags] [--refs] [--upload-pack=<exec>]:git ls-remote [--heads] [--tags] [--refs] [--upload-pack=<exec>]
+| --quiet] [--exit-code] [--get-url]:| --quiet] [--exit-code] [--get-url]
+[<repository> [<refs>...]]:[<repository> [<refs>...]]
+:
+--quiet           do not print remote URL:--quiet           do not print remote URL
+<exec>  path of git-upload-pack on the remote host:<exec>  path of git-upload-pack on the remote host
+--tags            limit to tags:--tags            limit to tags
+--heads           limit to heads:--heads           limit to heads
+do not show peeled tags:do not show peeled tags
+take url.<base>.insteadOf into account:take url.<base>.insteadOf into account
+<key>          field name to sort on:<key>          field name to sort on
+exit with exit code 2 if no matching refs are found:exit with exit code 2 if no matching refs are found
+show underlying ref in addition to the object pointed by it:show underlying ref in addition to the object pointed by it
+--server-option <server-specific>:--server-option <server-specific>
+to transmit:to transmit
+:
+//branch2//
+$ git checkout branch2
+Switched to branch 'branch2'
+
+$ git commit -m "Modify item #4"
+[branch2 baada5b] Modify item #4
+ 1 file changed, 5 insertions(+), 5 deletions(-)
+$ git log
+commit baada5b82d6fc727d1285f0d2a674b4b17f5a5cc (HEAD -> branch2)
+Author: Elena Efremovska <elenaelektraefremovska@gmail.com>
+Date:   Sat Apr 9 21:12:57 2022 +0200
+
+    Modify item #4
+
+commit 3c4aa630bd13a97a317a5e140b563b4b652983ef
+Author: Elena Efremovska <elenaelektraefremovska@gmail.com>
+Date:   Wed Apr 6 21:47:00 2022 +0200
+
+    Add quantities to the items
+
+commit c282b905e443d5333021714ffca9130fe3f0a3d5
+Author: Elena Efremovska <elenaelektraefremovska@gmail.com>
+Date:   Wed Apr 6 21:41:04 2022 +0200
+
+    Add 5 items to the shopping list
+
+User@Pc MINGW64 /c/SI_2022_lab1_167001 (branch2)
+$ git commit -m "Modify item #4 and add item #6"
+[branch2 9d4dc9c] Modify item #4 and add item #6
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+User@Pc MINGW64 /c/SI_2022_lab1_167001 (branch2)
+
+//Spojuvanje na granki//
+$ git merge branch1
+Auto-merging shopping_list.txt
+CONFLICT (content): Merge conflict in shopping_list.txt
+Automatic merge failed; fix conflicts and then commit the result.
+
+User@Pc MINGW64 /c/SI_2022_lab1_167001 (master)
+$ git merge branch2
+Already up to date.
+
+
+
+
+
+
+
+
+
 
 
