@@ -1,5 +1,9 @@
 book x 13
+<<<<<<< HEAD
 magazine x 75
+=======
+magazine x 7
+>>>>>>> branch1
 newspaper x 26
 broshure x 10
 maps x 42
