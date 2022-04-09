@@ -3,3 +3,4 @@ magazine x 75
 newspaper x 26
 commics x 10
 maps x 42
+puzzletext 37
